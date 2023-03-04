@@ -1,0 +1,120 @@
+/* Global CSS */
+
+nav {
+    background-color: #cdf6ed;
+    padding-inline: 10px;
+    padding: 30px;
+    color:#453932;
+}
+
+body {
+    background-color: #fafaf9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button {
+    color:#453932;
+    border: 2px solid #453932;
+    border-radius: 80%;
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    padding-left: 90px;
+}
+
+button:hover {
+    background-color:#fafaf9;
+}
+
+/* Text and headings  */
+
+h1 {
+font-family: 'Kanit', sans-serif;
+font-weight: 500;
+font-size: 26px;
+color:#58483e;
+
+}
+
+h3, h4 {
+font-family: 'Kanit', sans-serif;
+font-weight: 400;
+font-size: 18px;
+color:#58483e;
+}
+
+p, em {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color:#453932;
+}
+
+.choice-grid div{
+    width: var(--grid-size);
+    border: 1px dotted #cdf6ed;
+    background-color: #fafaf9;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.choice-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+}
+
+.question-name {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .question-name h3 {
+    background-color: #cdf6ed;
+    color: #453932;
+    font-family: 'Kanit', sans-serif;
+    font-size: 22px;
+    padding: 10px;
+    max-width: 75%;
+  }
+
+/* Use <strong></strong> tags for bold text */
+strong {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color:#453932;
+}
+
+a {
+    color:#159e68;
+    text-decoration: dotted underline;
+}
+
+a:hover {
+    cursor:pointer;
+    text-decoration: underline overline;
+    color:#f4ab8d;
+}
+
+a:active {
+    text-decoration: underline overline;
+    background-color:#f4ab8d;
+    color:#fafaf9;
+}
+
+a:visited {
+    text-decoration:line-through;
+    color:#58483e;
+}
