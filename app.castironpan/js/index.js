@@ -117,6 +117,7 @@ image.onload = function () {
   ctx.drawImage(image, 0, 0);
 }
 
+init();
 
 
 
