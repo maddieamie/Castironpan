@@ -54,7 +54,7 @@ body {
     ul.color-options li.option {
         height: 20px;
         width: 20px;
-        border-radius: 50%;
+        border-radius: 5%;
         margin-top: 5px;
         position: relative;
 
@@ -129,7 +129,7 @@ body {
     color:#58483e;
     }
 
-    p, em {
+    p, em, li, aside {
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
         font-size: 16px;
@@ -171,19 +171,19 @@ body {
     }
 
     /* Color Palette Pre-set Colors */
-.v1 { 
+#v1 { 
     background-color:#cfb3ff;
 }
-.v2 {
+#v2 {
     background-color:#e7adf0;
 }
-.v3 {
+#v3 {
     background-color:#f8b8d0;
 }
-.v4 {
+#v4 {
     background-color:#ffcbc3;
 }
-.v5 {
+#v5 {
     background-color:#ffd481;
 }
 
