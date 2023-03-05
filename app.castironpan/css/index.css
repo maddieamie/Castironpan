@@ -44,12 +44,13 @@ body {
     }
 
     div.coption {
-        display: inline-flex;
+        display: flex;
         cursor: pointer;
         align-items: center;
         margin-bottom: 5px;
         height: 20px;
         width: 20px;
+        padding: 10px;
     }
 
     .option:hover {
@@ -104,15 +105,13 @@ body {
         background-color:#98887f;
     }
 
-    #drawing-board {
-        flex: auto;
-        overflow: hidden;
 
-    }
 
     canvas {
         width: 90%;
         height: 90%;
+        flex: auto;
+        overflow: hidden;
     }
 
 /* Text and headings  */

@@ -1,5 +1,5 @@
 
-const canvas = document.getElementById("drawing-canvas")
+const canvas = document.getElementsByTagName("canvas")
 const ctx = canvas.getContext("2d")
 resize()
 
@@ -26,7 +26,7 @@ function setPosition(e) {
 function draw (e) {
  if (e.buttons !==1) return;
 
- var color = document.getElementById("coption", "color-picker").value;
+ var color = colorButtons.value, colorPicker.getPropertyValue;
  ctx.beginPath ();
 
  ctx.lineWidth = sizeSlider;
@@ -51,12 +51,12 @@ const setCanvasBackground = () => {
   ctx.fillRect (0, 0, canvas.width, canvas.height);
   ctx.fillStyle = color; }
 
-if(selectedTool === "brush") {
+if(toolbox === "brush") {
   context.strokeStyle = color;
   context.lineTo(e.offsetX, e.offsetY)
   context.stroke()
 }
-else(selectedTool === 'eraser') {
+else(toolbox === "eraser") {
   context.strokeStyle = '#fafaf9' ; color;
   context.lineTo (e.offsetX, e.offsetY);
 }
@@ -67,7 +67,7 @@ toolbox.forEach (button => {
   button.addEventListener("click", () => {
   document.querySelector("coption", "option-tool");
   button.classList.add("active");
-            selectedTool = button.id;
+            toolbox = button.id;
         });
     });
 
