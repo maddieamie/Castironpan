@@ -4,9 +4,6 @@ nav {
     background-color: #cdf6ed;
     padding-inline: 10px;
     padding: 30px;
-    color:#453932;
-   
-
 }
 
 body {
@@ -21,14 +18,17 @@ button {
     color:#453932;
     background-color: #159E68;
     border: 2px solid #453932;
-    border-radius: 30%;
+    border-radius: 15%;
     transition: all 0.3s ease-in-out;
-    width: 80%;
+    width: 30%;
     padding: 8px;
     font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: uppercase;
+     font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 button:hover {
@@ -67,7 +67,7 @@ p, em {
     border: 1px dotted #cdf6ed;
     background-color: #fafaf9;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 20px;
 }
 
