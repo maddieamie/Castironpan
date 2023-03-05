@@ -5,6 +5,10 @@ nav {
     padding-inline: 10px;
     padding: 30px;
     color:#453932;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+
 }
 
 body {
@@ -17,26 +21,31 @@ body {
 
 button {
     color:#453932;
+    background-color: #159E68;
     border: 2px solid #453932;
-    border-radius: 80%;
+    border-radius: 30%;
     transition: all 0.3s ease-in-out;
     width: 80%;
-    padding: 15px;
-    font-size: 18px;
+    padding: 8px;
+    font-size: 20px;
     cursor: pointer;
-    padding-left: 90px;
+    text-align: center;
+    text-decoration: uppercase;
 }
 
 button:hover {
     background-color:#fafaf9;
 }
 
+button:active {
+    background-color:#CDF6ED;
+
 /* Text and headings  */
 
 h1 {
 font-family: 'Kanit', sans-serif;
 font-weight: 500;
-font-size: 26px;
+font-size: 30px;
 color:#58483e;
 
 }
@@ -44,14 +53,14 @@ color:#58483e;
 h3, h4 {
 font-family: 'Kanit', sans-serif;
 font-weight: 400;
-font-size: 18px;
+font-size: 25px;
 color:#58483e;
 }
 
 p, em {
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 18px;
     color:#453932;
 }
 
