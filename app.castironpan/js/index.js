@@ -1,57 +1,63 @@
 
-const canvas = document.getElementById('drawing-canvas')
-const context = canvas.getContext('2d')
+const canvas = document.getElementById("drawing-canvas")
+const ctx = canvas.getContext("2d")
 resize()
 
 function resize () {
-  context.canvas.width = window.innerWidth
-  context.canvas.height = window.innerHeight
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
 }
 
-const toolbox = document.querySelectorAll('option-tool')
-const fillColor = document.querySelector('fill-color')
-const sizeSlider = document.querySelector('size-slider')
-const colorButtons = document.querySelectorAll('color-options')
-const colorPicker = document.querySelector('color-picker')
-const clearCanvas = document.querySelector('clear-canvas')
-const saveImg = document.querySelector('save-img')
+const toolbox = document.querySelectorAll("option-tool");
+const fillColor = document.querySelector("fill-color");
+const sizeSlider = document.querySelector("size-slider");
+const colorButtons = document.querySelectorAll("coption");
+const colorPicker = document.querySelector("color-picker");
+const clearCanvas = document.querySelector("clear-canvas");
+const saveImg = document.querySelector("save-img");
 
-let prevMouseX
-let prevMouseY
-let snapshot
-isDrawing = false,
-selectedTool = 'brush'
-brushWidth = 5
-selectedColor = '#000'
+
+var pos = {x: 0, y: 0};
+function setPosition(e) {
+  pos.x = e.clientX;
+  pos.y = e.clintY;
+}
+
+function draw (e) {
+ if (e.buttons !==1) return;
+
+ var color = document.getElementById("coption", "color-picker").value;
+ ctx.beginPath ();
+
+ ctx.lineWidth = sizeSlider;
+ ctx.lineCap = "round";
+ ctx.strokeStyle = color;
+
+ ctx.moveTo (pos.x, pos.y);
+ setPosition(e);
+ ctx.lineTo(pos.x, pos.y);
+
+ ctx.stroke();
+
+}
+
+window.addEventListener("resize", resize)
+document.addEventListener("mousemove", draw);
+document.addEventListener("mousedown", setPosition);
+document.addEventListener("mouseenter", setPosition);
 
 const setCanvasBackground = () => {
-  context.fillStyle = '#fafaf9'
-  context.fillRect (0, 0, canvas.width, canvas.height)
-  context.fillStyle = selectedColor }
+  ctx.fillStyle = '#fafaf9';
+  ctx.fillRect (0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = color; }
 
-const startDraw = (e) => {
-  isDrawing =true
-  prevMouseX = e.offsetX
-  prevMouseY = e.offsetY
-  context.beginPath () 
-  context.lineWidth = brushWidth
-  context.strokeStyle = selectedColor
-  context.fillStyle = selectedColor
-  snapshot = context.getImageData(0, 0, canvas.width, canvas.height)
-}
-
-const drawing = (e) => {
-  if (!isDrawing) return;
-  context.putImageData(snapshot, 0, 0)
-}
-
-if(selectedTool === 'brush') {
-  context.strokeStyle = selectedColor
+if(selectedTool === "brush") {
+  context.strokeStyle = color;
   context.lineTo(e.offsetX, e.offsetY)
   context.stroke()
 }
 else(selectedTool === 'eraser') {
-  context.strokeStyle = '#fafaf9' ; selectedColor;
+  context.strokeStyle = '#fafaf9' ; color;
   context.lineTo (e.offsetX, e.offsetY);
 }
 
@@ -59,20 +65,20 @@ else(selectedTool === 'eraser') {
 
 toolbox.forEach (button => {
   button.addEventListener("click", () => {
-  document.querySelector('option', 'option-tool');
-  button.classList.add('active');
+  document.querySelector("coption", "option-tool");
+  button.classList.add("active");
             selectedTool = button.id;
         });
     });
 
-sizeSlider.addEventListener("change", brushWidth = sizeSlider.value);
+sizeSlider.addEventListener("change", lineWidth = sizeSlider.value);
     
 
 colorButtons.forEach (button => {
   button.addEventListener("click", () => {
-  document.querySelector('color-options', 'color-picker');
-  button.classList.add('selected');
-  selectedColor = window.getComputedStyle(button).getPropertyValue('background-color');
+  document.querySelector("cptions", "color-picker");
+  button.classList.add("selected");
+  color = window.getComputedStyle(button).getPropertyValue('background-color');
         }
         );
     });
@@ -87,7 +93,6 @@ clearCanvas.addEventListener("click", () => {
   setCanvasBackground();
     });
 
-window.addEventListener("resize", resize);
 
 window.addEventListener("load", () => {
   canvas.width = canvas.offsetWidth;
@@ -103,20 +108,17 @@ saveImg.addEventListener("click", () => {
   link.click();
     });
 
+localStorage.setItem(canvas, canvas.toDataURL());
 
-if (isDrawing = true) {
-
-window.onload = function() {
- localStorage.setItem("canvasdrawing", $("drawing"), $("snapshot").value());
-}
- 
-var canvasdrawing = localStorage.getItem("canvasdrawing");
-console.log(canvasdrawing); 
+var toDataURL = localStorage.getItem(canvas)'
+var image = new Image;
+image.src =dataURL;
+image.onload = function () {
+  ctx.drawImage(image, 0, 0);
 }
 
-canvas.addEventListener("mousedown", startDraw);
-canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup"), () => isDrawing = false;
+
+
 
    
  
