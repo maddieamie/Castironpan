@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&family=Kanit:wght@400;500&display=swap" rel="stylesheet">
 
-<script src="app.castironpan/js/index.js" type="text/javascript" defer></script>
+<script src="app.castironpan/js/index.t.js" type="text/javascript" defer></script>
 
 </head>
 
@@ -32,7 +32,7 @@
 </nav>
 
 
-<div class="container" id="paint-app-toolbox">
+<!-- <div class="container" id="paint-app-toolbox">
     <section class="tools-board">
    
         <div class="row" id="brushtools">
@@ -163,7 +163,24 @@
         <canvas id="can" alt="This is the drawing canvas, rendered in Javascript."> Draw here. </canvas>
     </section>
 
-</div>
+</div> -->
+
+<section id="drawing-canvas">
+    <div class="row 50% third">
+        <div class="12u">
+          <canvas class="image fit" id="can" width="50%" height="50%" style=" background-color:rgb(250,250,250); "></canvas>
+          <div id="v1" class="colors" onclick="color(this)"></div>
+          <div id="v2" class="colors" onclick="color(this)"></div>
+          <div id="v3" class="colors" onclick="color(this)"></div>
+          <div id="v4" class="colors" onclick="color(this)"></div>
+          <div id="v5" class="colors" onclick="color(this)"></div>
+          <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+          <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
+          <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+        </div>
+      </div>
+
+</section>
 
 <section>
     <div id="app-description">

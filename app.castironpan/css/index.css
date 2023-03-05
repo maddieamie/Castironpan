@@ -35,17 +35,17 @@ body {
 
     }
 
-    div.painting-app-toolbox {
+    /* div.painting-app-toolbox {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 10px 5px;
         justify-items: left;
-    }
+    } */
 
 
 
-    .option:hover {
+    /* .option:hover {
        background-color: #cdf6ed;
        cursor: pointer;
 
@@ -78,9 +78,9 @@ body {
     #color-picker {
         opacity: 0.2;
         cursor: pointer;
-    }
+    } */
 
-    button {
+    #btn, #clr{
         background-color: #a4e2bf;
         color:#453932;
         border: 4px solid #453932;
@@ -90,17 +90,17 @@ body {
         cursor: pointer;
     }
     
-    button:hover {
+    #btn:hover, #clr:hover {
         background-color:#fafaf9;
     }
 
-    button:active {
+    #btn:active, #clr:active {
         background-color:#98887f;
     }
 
 
 
-    canvas {
+    #canvasimg {
         width: 60%;
         height: 50%;
         flex: auto;
@@ -110,8 +110,8 @@ body {
         
     }
 
-    div.palette-selector {
-        display:inline-table;
+    /* div.palette-selector {
+        display:inline-flexbox;
         padding: 15px;
 
     }
@@ -122,7 +122,7 @@ body {
         width: 20px;
         padding: 10px;
 
-    }
+    } */
 
 /* Text and headings  */
     h1 {
@@ -183,18 +183,28 @@ body {
 
     /* Color Palette Pre-set Colors */
 #v1 { 
-    background-color:#cfb3ff;
+    background:#cfb3ff;
+    height:20px;
+    width: 20px;
 }
 #v2 {
-    background-color:#e7adf0;
+    background:#e7adf0;
+    height:20px;
+    width: 20px;
 }
 #v3 {
-    background-color:#f8b8d0;
+    background:#f8b8d0;
+    height:20px;
+    width: 20px;
 }
 #v4 {
-    background-color:#ffcbc3;
+    background:#ffcbc3;
+    height:20px;
+    width: 20px;
 }
 #v5 {
-    background-color:#ffd481;
+    background:#ffd481;
+    height:20px;
+    width: 20px;
 }
 
