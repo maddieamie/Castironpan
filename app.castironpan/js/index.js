@@ -50,10 +50,6 @@ document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
 
-const setCanvasBackground = () => {
-  ctx.fillStyle = '#fafaf9';
-  ctx.fillRect (0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = color; }
 
 if(toolbox === "brush") {
   context.strokeStyle = color;
