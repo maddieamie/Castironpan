@@ -1,6 +1,10 @@
 
-const canvas = document.getElementsByTagName("canvas")
-const ctx = canvas.getContext("2d")
+function init() {
+  canvas = document.getElementById('can');
+  ctx = canvas.getContext("2d");
+  w = canvas.width;
+  h = canvas.height; }
+
 resize()
 
 function resize () {
@@ -26,7 +30,7 @@ function setPosition(e) {
 function draw (e) {
  if (e.buttons !==1) return;
 
- var color = colorButtons.value, colorPicker.getPropertyValue;
+ var color = colorButtons.value, colorPicker,getPropertyValue;
  ctx.beginPath ();
 
  ctx.lineWidth = sizeSlider;
@@ -57,7 +61,7 @@ if(toolbox === "brush") {
   context.stroke()
 }
 else(toolbox === "eraser") {
-  context.strokeStyle = '#fafaf9' ; color;
+  context.strokeStyle = '#fafaf9'; color;
   context.lineTo (e.offsetX, e.offsetY);
 }
 
@@ -110,7 +114,7 @@ saveImg.addEventListener("click", () => {
 
 localStorage.setItem(canvas, canvas.toDataURL());
 
-var toDataURL = localStorage.getItem(canvas)'
+var toDataURL = localStorage.getItem("can");
 var image = new Image;
 image.src =dataURL;
 image.onload = function () {

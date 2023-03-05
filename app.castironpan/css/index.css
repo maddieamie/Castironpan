@@ -108,8 +108,8 @@ body {
 
 
     canvas {
-        width: 90%;
-        height: 90%;
+        width: 50%;
+        height: 50%;
         flex: auto;
         overflow: hidden;
     }
