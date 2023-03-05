@@ -5,6 +5,7 @@
         padding-inline: 10px;
         padding: 30px;
         color:#453932;
+  
     }
 
     body {
@@ -16,16 +17,17 @@
     }
 
     button {
-        background-color: #159e68;
-        color:#453932;
-        border: 2px solid #453932;
-        border-radius: 80%;
-        transition: all 0.3s ease-in-out;
-        width: 80%;
-        padding: 15px;
-        font-size: 18px;
-        cursor: pointer;
-        padding-left: 90px;
+    color:#453932;
+    background-color: #159E68;
+    border: 2px solid #453932;
+    border-radius: 30%;
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: uppercase;
     }
     
     button:hover {
@@ -33,44 +35,47 @@
     }
 
     button:active {
-        background-color:#98887f;
+        background-color:#CDF6ED;
     }
 
 /* Text and headings  */
 
-    h1 {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 26px;
-    color:#58483e;
+h1 {
+font-family: 'Kanit', sans-serif;
+font-weight: 500;
+font-size: 30px;
+color:#58483e;
 
-    }
+}
 
-    h3, h4 {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
+h3, h4 {
+font-family: 'Kanit', sans-serif;
+font-weight: 400;
+font-size: 25px;
+color:#58483e;
+}
+
+p, em {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
     font-size: 18px;
-    color:#58483e;
-    }
-
-    p, em {
-        font-family: 'Dosis', sans-serif;
-        font-weight: 300;
-        font-size: 14px;
-        color:#453932;
-    }
+    color:#453932;
+}
 
     /* Use <strong></strong> tags for bold text */
     strong {
         font-family: 'Dosis', sans-serif;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 18px;
         color:#453932;
     }
 
     a {
         color:#159e68;
         text-decoration: dotted underline;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 500;
+        font-size: 30px;
     }
 
     a:hover {
