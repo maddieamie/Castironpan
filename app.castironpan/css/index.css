@@ -132,7 +132,7 @@ body {
     p, em {
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 16px;
         color:#453932;
     }
 
@@ -140,13 +140,17 @@ body {
     strong {
         font-family: 'Dosis', sans-serif;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 16px;
         color:#453932;
     }
 
     a {
         color:#159e68;
         text-decoration: dotted underline;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400; 
     }
 
     a:hover {
@@ -167,3 +171,19 @@ body {
     }
 
     /* Color Palette Pre-set Colors */
+.v1 { 
+    background-color:#cfb3ff;
+}
+.v2 {
+    background-color:#e7adf0;
+}
+.v3 {
+    background-color:#f8b8d0;
+}
+.v4 {
+    background-color:#ffcbc3;
+}
+.v5 {
+    background-color:#ffd481;
+}
+

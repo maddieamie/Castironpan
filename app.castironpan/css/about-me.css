@@ -3,8 +3,8 @@
     nav {
         background-color: #cdf6ed;
         padding-inline: 10px;
-        padding: 30px;
-        color:#453932;
+        padding: 10px;
+        
     }
 
     body {
@@ -23,7 +23,7 @@
         transition: all 0.3s ease-in-out;
         width: 80%;
         padding: 15px;
-        font-size: 18px;
+        font-size: 16px;
         cursor: pointer;
         padding-left: 90px;
     }
@@ -56,7 +56,7 @@
     p, em {
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 16px;
         color:#453932;
     }
 
@@ -64,13 +64,17 @@
     strong {
         font-family: 'Dosis', sans-serif;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 16px;
         color:#453932;
     }
 
     a {
         color:#159e68;
         text-decoration: dotted underline;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400; 
     }
 
     a:hover {

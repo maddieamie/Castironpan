@@ -30,7 +30,6 @@ function mode(dict)
     {
         let el = array[i];
         if(modeMap[el] == null)
-        // second question id 
             modeMap[el] = 2; 
         else
             modeMap[el]++;  
@@ -79,7 +78,6 @@ function changeOpaque(array, opacity='0.6'){
     }
 }
 
-// check to see if quiz is finished, all answers selected
 function isQuizOver(){
 
     let over = false;
@@ -93,13 +91,11 @@ function isQuizOver(){
     return over;
 }
 
-// make the restart quiz button
+
 function createRestartButton(){
-    // creating button element  
+   
     let button = document.createElement('BUTTON');  
     button.addEventListener('click', restart)
-    // creating text to be 
-    //displayed on button 
     let text = document.createTextNode("Restart Quiz"); 
 
     button.style.width = '100%';
@@ -111,7 +107,7 @@ function createRestartButton(){
 }
 
 function globalStyleReset(){
-    // ans_1, ans_2, ans_3...
+   
     
     for(const box of ans_1){
         box.style.backgroundColor = '#fafaf9';
@@ -166,7 +162,6 @@ function globalStyleReset(){
 
 }
 
-//  re-initiate the global variables to start over
 function reinitGlobalVar(){
 
     q1_unselected_box = unselected_boxes(ans_1);
@@ -225,7 +220,6 @@ function restart(event){
     reinitGlobalVar();
 }
 
-// choose an answer event listener
 function click_answer(event){
     const divB = event.currentTarget;
     const qn_id = divB.dataset.questionId;
@@ -233,9 +227,8 @@ function click_answer(event){
     let clicked_button = id_to_qn_click[qn_id];
     let unclicked_buttons = id_to_qn_unselected_boxes[qn_id];
 
-    // change background and opacity of a qn
+    /
     if(clicked_button !== undefined){
-        // reset previous answer style
         clicked_button.style.backgroundColor = '#fafaf9';
 
         unclicked_buttons.push(clicked_button);
@@ -247,10 +240,7 @@ function click_answer(event){
     removeElem(unclicked_buttons, divB);
     changeOpaque(unclicked_buttons);
     
-    //winner(q2_selected_box.dataset.choiceId); 
-
-
- // disable clicking on questions if quiz is over
+  
     if (isQuizOver()){
         disable_click_qns(ans_1);
         disable_click_qns(ans_2);
@@ -271,7 +261,7 @@ function click_answer(event){
 
 
 
-// constants for unselected answers
+
 const ans_1 = document.querySelectorAll('[data-question-id="one"]');
 let q1_unselected_box = unselected_boxes(ans_1);
 
