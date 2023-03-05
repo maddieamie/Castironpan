@@ -116,7 +116,7 @@ saveImg = document.querySelector("save-img");
 
 
     if (isDrawing = true) {
-        // store canvas image
+ 
         window.onload = function() {
             localStorage.setItem("canvasdrawing", $("drawing"), $("snapshot").value());
         }
