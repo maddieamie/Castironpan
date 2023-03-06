@@ -5,7 +5,7 @@ var canvas, ctx, flag = false,
   currY = 0,
   dot_flag = false;
 
-var x = "black",
+var x = "v1",
   y = 2;
 
 function init() {
@@ -31,21 +31,24 @@ function init() {
 function color(obj) {
   switch (obj.id) {
 
-    case "blue":
-      x = "blue";
+    case "v1":
+      x = "v1";
       break;
-    case "red":
-      x = "red";
+    case "v2":
+      x = "v2";
       break;
 
-    case "black":
-      x = "black";
+    case "v3":
+      x = "v3";
       break;
-    case "white":
-      x = "white";
+    case "v4":
+      x = "v4";
       break;
+    case "v5":
+        x = "v5";
+        break;
   }
-  if (x == "white") y = 14;
+  if (x == "v1") y = 14;
   else y = 2;
 
 }
