@@ -72,17 +72,40 @@ function erase() {
 }
 
 function save() {
-  document.getElementById("canvasimg").style.border = "1px solid";
+  document.getElementById("canvasimg").style.border = "3px solid";
   var dataURL = canvas.toDataURL();
   document.getElementById("canvasimg").src = dataURL;
   document.getElementById("canvasimg").style.display = "inline";
 }
 
 function findxy(res, e) {
-  if (res == 'down') {
-    prevX = currX;
-    prevY = currY;
-}
-}
-
-init();
+    if (res == 'down') {
+      prevX = currX;
+      prevY = currY;
+      currX = e.clientX - canvas.offsetLeft;
+      currY = e.clientY - canvas.offsetTop;
+  
+      flag = true;
+      dot_flag = true;
+      if (dot_flag) {
+        ctx.beginPath();
+        ctx.fillStyle = x;
+        ctx.fillRect(currX, currY, 2, 2);
+        ctx.closePath();
+        dot_flag = false;
+      }
+    }
+    if (res == 'up' || res == "out") {
+      flag = false;
+    }
+    if (res == 'move') {
+      if (flag) {
+        prevX = currX;
+        prevY = currY;
+        currX = e.clientX - canvas.offsetLeft;
+        currY = e.clientY - canvas.offsetTop;
+        draw();
+      }
+    }
+  }
+  init();

@@ -5,6 +5,8 @@
     font-size: 14px;
     font-weight: 300;
     color:#453932;
+    display: flexbox;
+    padding-bottom: 30px;
 }
 
 nav {
@@ -23,7 +25,6 @@ nav a {
 
 body {
     background-color: #fafaf9;
-    display: flex-box; 
  }
 
  /* Structure CSS */
