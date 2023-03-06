@@ -101,11 +101,9 @@ body {
 
 
 
-    #canvasimg {
+    #can {
         width: 60%;
         height: 50%;
-        flex: auto;
-        overflow: hidden;
         background-color: #fff9f6;
         border: 2px dotted #a4e2bf;
         
