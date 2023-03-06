@@ -23,7 +23,7 @@ nav a {
 
 body {
     background-color: #fafaf9;
-    display: flex; 
+    display: flex-box; 
  }
 
  /* Structure CSS */

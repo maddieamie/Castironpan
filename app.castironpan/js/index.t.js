@@ -84,3 +84,5 @@ function findxy(res, e) {
     prevY = currY;
 }
 }
+
+init();
